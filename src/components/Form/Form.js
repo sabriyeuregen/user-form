@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Form.css";
 
 const Form = (props) => {
   const [userName, setUserName] = useState();
@@ -33,20 +32,20 @@ const Form = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <label>Name</label>
+    <form onSubmit={submitHandler} className="block ">
+      <label className="block text-sm font-medium text-slate-700">Name</label>
       <input type="text" onChange={nameChangeHandler}></input>
-      <label>SurName</label>
+      <label className="block text-sm font-medium text-slate-700">SurName</label>
       <input type="text" onChange={surNameChangeHandler}></input>
-      <select onChange={optionChangeHandler}>
-        <option value="grapefruit">Backend</option>
-        <option value="lime">Frontend</option>
-        <option value="coconut">
+      <select onChange={optionChangeHandler} className="block text-sm font-medium text-slate-700">
+        <option value="backend">Backend</option>
+        <option value="frontend">Frontend</option>
+        <option value="mobile">
           Mobile
         </option>
-        <option value="mango">Test</option>
+        <option value="test">Test</option>
       </select>
-      <button type="submit">Add User</button>
+      <button  type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add User</button>
     </form>
   );
 };
