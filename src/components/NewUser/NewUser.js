@@ -1,4 +1,5 @@
 import Form from "../Form/Form";
+import  "./NewUser.css";
 
 const NewUser = (props) => {
     
